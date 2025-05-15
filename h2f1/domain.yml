@@ -1,0 +1,17 @@
+version: "3.1"
+intents:
+  - greet
+  - ask_real_estate
+  - accept_collab_offer
+  - provide_user_info
+  - provide_client_info
+
+responses:
+  utter_greet:
+  - text: "سلام، خوش اومدید به همراه‌ساز! در هر زمینه‌ای از املاک یا طراحی سایت سوالی دارید بپرسید. من همیشه هستم."
+
+actions:
+  - action_check_questions
+  - action_ask_user_info
+  - action_store_user_info
+  - action_generate_referral_code

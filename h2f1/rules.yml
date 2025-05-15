@@ -1,0 +1,26 @@
+version: "3.1"
+rules:
+- rule: پاسخ به سلام
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: پیشنهاد همکاری پس از سوال دوم درباره املاک
+  steps:
+  - intent: ask_real_estate
+  - action: action_check_questions
+
+- rule: پذیرش همکاری
+  steps:
+  - intent: accept_collab_offer
+  - action: action_ask_user_info
+
+- rule: دریافت اطلاعات کاربر
+  steps:
+  - intent: provide_user_info
+  - action: action_store_user_info
+
+- rule: دریافت اطلاعات مشتری و ساخت کد ارجاع
+  steps:
+  - intent: provide_client_info
+  - action: action_generate_referral_code
